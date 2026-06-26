@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bioio-conversion
-  version: "1.0.1"
+  version: "2.0.0"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bioio_conversion-${{ version }}.tar.gz
-  sha256: e3c2ee3763de3f396e02c62e931fd5e623ae62d4a9db02afd3eea27b7d31a989
+  sha256: cf1a4513817f71eb28fc3e86063589fcb29ff119af25afc6dcf2bf305c571ebd
 
 build:
   number: 0
@@ -32,7 +32,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - bioio >=3.0.0
-    - bioio-ome-zarr >=3.0.1
+    - bioio-base >=3.4.0
+    - bioio-ome-zarr >=3.5.0
     - numpy >=1.24.0
     - dask-core >=2021.10.0
     - numcodecs >=0.10.0
