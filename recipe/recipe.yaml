@@ -44,7 +44,9 @@ requirements:
 
 tests:
   - python:
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - bioio_conversion
       pip_check: true
