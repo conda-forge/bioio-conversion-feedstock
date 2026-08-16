@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bioio-conversion
-  version: "2.3.1"
+  version: "2.4.0"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bioio_conversion-${{ version }}.tar.gz
-  sha256: 2f2e653a8422795155fbf7836aac6ba60c74c9e332517bd9256a6b8142b66148
+  sha256: 598134d2faf018dc319b1b13da3aa0b4e18dce504f9d0ace6911e41663ee6891
 
 build:
   number: 0
@@ -44,7 +44,9 @@ requirements:
 
 tests:
   - python:
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - bioio_conversion
       pip_check: true
